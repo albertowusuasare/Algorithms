@@ -1,0 +1,38 @@
+package Chapter9;
+
+public class Question1 {
+
+	/**
+	 * A child is running up a staircase with n steps, and can hop either 1 step, 2
+	 * steps or 3 steps at a time. Implement a method to count how many possible
+	 * ways the child can run up the stairs.
+	 * 
+	 */
+	
+	/*
+	 * Idea : let us imagine that the child is on the very last hop, the nth step
+	 *	    . We know that to get to the last step the the child could have taken a single 
+	 *	      step, or 2 steps or 3 steps.
+	 *        Therefore for the number of ways to get to the n step is the total number of ways 
+	 *        to get to the n-1, n-2 , n-3
+	 * 
+	 */
+	
+	
+	public static Integer countWays(Integer n){
+		//No such thing as negative step: return 0
+		if (n <=0 )
+			return 0;
+		//if one  step then return 1 since there is only one way to run that stair
+		if( n ==1)
+			return 1;
+		// else results is the combination of the numberof
+		return countWays(n -1) + countWays(n -2) + countWays(n -3);
+	}
+	public static void main(String[] args) {
+		
+		Integer results = countWays(2);
+
+	}
+
+}
