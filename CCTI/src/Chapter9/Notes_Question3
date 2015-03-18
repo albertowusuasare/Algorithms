@@ -1,0 +1,44 @@
+
+	 
+	 The main idea here is to recognize the keywords as given from the problem.
+	 One of such keywords is "sorted array", another is distinct.
+	  I started thinking about binary search, middle value, one index left and right of middle 
+	  value etc.
+	  
+	  The idea then is that you check the middle element, thus the element at (n-1/2). If value
+	  is (n-1) /2, I immediately return. If its not, just like binary search, I eliminate one
+	  half of the array. Which half to eliminate? Well lets think about it.
+	  if the value at (n-1)/ 2 is less than (n-1)/2 then we know that the value at one index 
+	  to the right of the middle ( n-1)/2 -1 or (n-2) /2 must have a value at least one less than 
+	  the value at the middle. We know that this value then is also less than (n-2) /2 and so is every
+	  other index in the left half.
+	  
+	  A similar argument can be made of if the value in the middle was larger than (n-1)/2.
+	  
+	  
+	  
+	  Follow up
+	  =========
+	  Now if the values are not distinct. Our understanding of the problem still stays pretty much
+	  intact. What changes how we select what to recurse over.
+	  
+	  Again check the value at the middle index (n-1)/2 . If this value = (n-1)/2 , we return
+	  If not, we think.
+	  
+	  if it less than (n-1)/2, there is still a chance that we will find it in the left side of the 
+	  array because we could have this value repeat all the way till the needed index. Using the same 
+	  logic as before we know that if the value at  (n-2)/ 2 is not equal to the value at (n-1)/2
+	  then (n-2)/2 is not the majic index. In fact we can eliminate all  positions except from 0 to
+	  value at ( n-1)/2.
+	  
+	  Note that we also search the right hand side in the event that we never found it at the left
+	  hand side
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
