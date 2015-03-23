@@ -1,0 +1,14 @@
+We approach this question as follows.
+
+In general, find the n-case type of questions suggests a recursive algorithm. Thus to find the
+n case we ask our selves "What can we do to the solutions from the (n-1) case to find the n case.
+
+For example for n =3, we know that our outputs are supposed to be
+((())), ((),()), (())(),()(()),()()()
+
+Now if we had n=2 [ (()),()()] , what might we do to obtain the n= 3 solution?
+
+We quickly find that we can add  "()" everytime we see a left paren in each of the strings representing
+the solution of n=2.
+
+
