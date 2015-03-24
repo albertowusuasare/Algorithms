@@ -35,7 +35,7 @@ public class Question6 {
 	}//insertParen
 	public static void main(String[] args) {
 	PrintWriter pen = new PrintWriter(System.out,true);
-	pen.println(generateParens(3));
+	pen.println(generateParens(4));
 
 	}
 
