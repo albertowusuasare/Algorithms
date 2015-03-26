@@ -1,0 +1,39 @@
+/*
+ * Author : Albert Owusu-Asare
+ * Date created : Wed Mar 25 23:53:47 CDT 2015
+ */
+ 
+ This question asks to mimic algorithmically how the popular paint fill function works.
+ 
+ Procedure : paintFill
+ Parameters : Colors , a two dimensional array representing the colors of each pixel.
+ 	            x, the horizontal coordinate for the desired pixel
+ 	            y, the vertical coordinate for the desired pixel
+ 	            ncolor, the new color to change to 
+Produces : true, if fill is successful
+           false if fill is not sucessful
+           
+           
+  Idea:
+  =====
+  -> Go to the pixel in question. Retrieve its color. Color ocolor = colors [y][x]
+  -> If the color at that pixel is the new color, do nothing. Else change the color of the 
+     desired pixel to the new color
+ 	 
+ 	 if(oColor == nColor)
+ 	    return false;
+ 	  Call some recursive helper function that will now change all the pixels of the old
+ 	  color to the new one
+ 	  
+ 	  
+ 	  
+ 	  //base case : if the cordinates are within the bounds of the image
+ 	  
+ 	  if(current pixel == the oColor)
+ 	     change current pixel to the new color
+ 	     Repeat for upper pixel
+ 	     Repeat for lower pixel
+ 	     Repeat for pixel to the left
+ 	     Repeat for pixel to the right
+ 	     
+ 	  return true
